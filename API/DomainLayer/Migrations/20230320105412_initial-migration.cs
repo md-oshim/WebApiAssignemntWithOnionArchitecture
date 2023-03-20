@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace RepositoryLayer.Migrations
+namespace DomainLayer.Migrations
 {
     /// <inheritdoc />
     public partial class initialmigration : Migration

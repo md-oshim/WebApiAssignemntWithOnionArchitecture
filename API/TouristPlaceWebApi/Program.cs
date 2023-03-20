@@ -1,7 +1,8 @@
-using Microsoft.AspNetCore.Cors;
+using DomainLayer;
 using Microsoft.EntityFrameworkCore;
 using RepositoryLayer;
-using ServiceLayer;
+using ServiceLayer.Implementations;
+using ServiceLayer.Interfaces;
 
 namespace TouristPlaceWebApi
 {
@@ -14,7 +15,7 @@ namespace TouristPlaceWebApi
             // Add services to the container.
            
             builder.Services.AddControllers();
-            builder.Services.AddDbContext<TouristPlaceContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TouristPlaceConnectionString")));
+            builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TouristPlaceConnectionString")));
             builder.Services.AddScoped(typeof(IRepository <>), typeof(Repository<>));
             builder.Services.AddScoped<ITouristPlaceServices, TouristPlaceServices>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

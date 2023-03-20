@@ -1,7 +1,7 @@
 ﻿using DomainLayer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using ServiceLayer;
+using ServiceLayer.Interfaces;
 
 namespace TouristPlaceWebApi.Controllers
 {

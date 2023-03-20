@@ -6,9 +6,9 @@ namespace RepositoryLayer
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly TouristPlaceContext _context;
+        private readonly ApplicationContext _context;
         private DbSet<T> _entities;
-        public Repository(TouristPlaceContext touristPlaceContext)
+        public Repository(ApplicationContext touristPlaceContext)
         {
             _context = touristPlaceContext;
             _entities = _context.Set<T>();
@@ -72,7 +72,5 @@ namespace RepositoryLayer
             _context.SaveChanges(); 
             await SaveChangesAsync();
         }
-
-        
     }
 }

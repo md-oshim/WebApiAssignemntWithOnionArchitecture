@@ -1,7 +1,8 @@
 ﻿using DomainLayer;
 using RepositoryLayer;
+using ServiceLayer.Interfaces;
 
-namespace ServiceLayer
+namespace ServiceLayer.Implementations
 {
     public class TouristPlaceServices : ITouristPlaceServices
     {
@@ -17,7 +18,7 @@ namespace ServiceLayer
 
         public async Task<IAsyncEnumerable<TouristPlace>> GetAllTouristPlacesAsync()
         {
-            return await _touristPlaceRepository.GetAllAsync();      
+            return await _touristPlaceRepository.GetAllAsync();
         }
 
         public async Task<TouristPlace> GetTouristPlaceByIdAsync(int id)
@@ -45,7 +46,7 @@ namespace ServiceLayer
             return false;
         }
 
-        public  IList<TouristPlace> TouristPlaceGeneralSearch(string searchedText)
+        public IList<TouristPlace> TouristPlaceGeneralSearch(string searchedText)
         {
             var result = _touristPlaceRepository.GeneralSearch((touristPlace) => touristPlace.Name.Contains(searchedText));
             return result.ToList();
