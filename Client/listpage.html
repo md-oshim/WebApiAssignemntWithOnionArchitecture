@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="list-page">
+        <div class="container">
+            <div class="search">
+                <input type="text" class="search-box" placeholder="Enter name to search">
+            </div>
+            <table class="fixed_header">
+                <thead>
+                    <tr>
+                        <th id="name-col">NAME</th>
+                        <th>ADDRESS</th>
+                        <th id="rating-col">RATING</th>
+                        <th>PICTURE</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <a class="button blue create-new">Create New Tourist Place</a>
+        </div>
+    </div>
+
+    <div id="create-page" class="hidden">
+        <div class="container">
+            <h1 id = 'dynamic-heading'>Add a new Tourist Place</h1>
+            <form action="#" enctype="multipart/form-data">
+                <div class="hidden">
+                    <input id="id" type="text" value="0">
+                </div>
+                <div class="item">
+                    <label for="name" >Name:</label>
+                    <input id="name" type="text">
+                </div>
+                <div class="item">
+                    <label for="address" >Address:</label>
+                    <input id="address" type="text">
+                </div>
+                <div class="item">
+                    <label for="rating">Rating:</label>
+                    <input id="rating" type="number" max="5" min="1">
+                    <div class="side red-text" ><span>Range 1 to 5</span></div>
+                </div>
+                <div class="item relative">
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">
+                        <option value=""></option>
+                        <option value="Beach">Beach</option>
+                        <option value="Hills">Hills</option>
+                        <option value="Fountain">Fountain</option>
+                        <option value="Landmark">Landmark</option>
+                    </select>
+                </div>
+    
+                <div class="item">
+                    <label for="picture">Picture:</label>
+                    <input onchange="picturePreviewAndErrorMessageHandler(this);" id="picture" type="file" accept=".png, .jpg, .jpeg" class="red-outline">
+                    <div class="side"></div>
+                </div>
+    
+                <div class="item right-align">
+                    <a class="green button" id="submit">Submit</a>
+                    <a class="yellow button" id="reset">Reset</a>
+    
+                </div>
+                <div class="item right-align">
+                    <a class="tourist-place-list">Back to Tourist Place List</a>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="myjquery.js"></script>
+    
+</body>
+</html>

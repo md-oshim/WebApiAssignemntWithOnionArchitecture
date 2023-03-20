@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 30px;
+}
+
+.side {
+    display: inline-block;
+}
+
+.red-text {
+    color:red;
+}
+
+form label {
+    display: inline-block;
+    width: 15%;
+}
+
+#type, form input {
+    padding: 8px 12px;
+    margin: 8px 10px;
+    width: 60%;
+    border-radius: 10px;
+    background-color: rgba(174, 173, 173, 0.15);
+}
+
+button, .button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    border-top: 2px solid rgb(206, 206, 207);
+    border-left: 2px solid rgb(206, 206, 207);
+    border-right: 2px solid rgb(75, 73, 73);
+    border-bottom: 2px solid rgb(75, 73, 73);
+    display: inline-block;
+}
+
+#submit, #reset {
+    color: white;
+}
+
+.red-outline {
+    outline: 1px solid red;
+}
+
+.green {
+    background-color: rgb(69, 198, 69);
+    color: white;
+}
+
+.yellow {
+    background-color: rgba(237, 177, 58, 0.925);
+    color: white;
+}
+
+.blue {
+    background-color: rgb(92, 156, 230);
+    color: white;
+}
+
+.red {
+    background-color: rgb(219, 61, 61);
+    color: white;
+}
+
+.item.right-align {
+    width: 76.5%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 0;
+    gap: 15px;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative .side {
+    position: absolute;
+    top: 7px;
+}
+
+.item {
+    margin: 20px 0;
+}
+
+.right-align a {
+    color:rgb(5, 210, 203);
+}
+
+/* list page */
+
+.search {
+    width: 50%;
+    
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(174, 173, 173, 0.15);
+}
+
+table {
+    border: 2px solid black;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+}
+
+td img {
+    width: 150px;
+    height: 200px;
+}
+
+th {
+    background-color: black;
+    color: white;
+    padding: 8px 13px;
+}
+
+th, td {
+    text-align: center;
+}
+
+tbody tr:nth-child(2) td {
+    background-color: rgba(174, 173, 173, 0.15);
+}
+
+.cell-button button {
+    margin: 7px;
+}
+
+.hidden {
+    display: none;
+}
+
+.create-new, .tourist-place-list, .button, button {
+    cursor: pointer;
+}
+
+.error-message {
+    color:red;
+    margin-left: 30%;
+}
+
+.search {
+    position: relative;
+}
+
+.search-result {
+    border: 1px solid gray;
+    margin: 3px 0;
+    padding: 10px;
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 30%;
+}
+
+#picture~.side img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    display: inline-block;
+    translate: 0 -75px;
+}
+
+#name-col, #rating-col {
+    cursor: pointer;
+}
+
+
+/* CSS for scrollable table */
+
+.fixed_header {
+    width: auto;
+    table-layout: fixed;
+    border-collapse: unset;
+}
+
+.fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 620px;
+}
+
+.fixed_header thead tr {
+    display: block;
+}
+
+.fixed_header thead {
+    color: #fff;
+}
+
+.fixed_header th {
+    background: black;
+}
+
+.fixed_header th,
+.fixed_header td {
+    padding: 5px;
+    width: 200px;
+}
